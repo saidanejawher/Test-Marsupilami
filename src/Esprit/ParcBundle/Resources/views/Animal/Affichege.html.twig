@@ -1,0 +1,24 @@
+<h1>La liste des Animauxt</h1>
+<table border="1">
+    <th>Id</th>
+    <th>age</th>
+    <th>famille</th>
+    <th>Race</th>
+    <th>nourriture</th>
+    <th>Modifier</th>
+    {% for m in animales %}
+        <tr>
+
+            <td>{{ m.id}}</td>
+            <td>{{ m.age }}</td>
+            <td>{{ m.famille }}</td>
+            <td>{{ m.race }}</td>
+            <td>{{ m.nourriture }}</td>
+            <td> <a href="{{ path('SupprimerAnimal',{'id':m.id}) }}" target="_blank">supprimer</a></td>
+            <td> <a href="{{ path('ModifierAnimal',{'id':m.id}) }}" target="_blank">modifier</a></td>
+
+
+        </tr>
+    {% endfor %}
+
+</table>

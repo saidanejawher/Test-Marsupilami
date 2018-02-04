@@ -1,0 +1,49 @@
+<h1>Update Animal</h1>
+
+{{ form_start((form)) }}
+<table>
+    <tr>
+        <td>
+           age
+        </td>
+        <td>
+            {{ form_widget(form.age) }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Famille
+        </td>
+        <td>
+            {{ form_widget(form.famille) }}
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Race
+        </td>
+        <td>
+            {{ form_widget(form.race) }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+          Norriture
+        </td>
+        <td>
+            {{ form_widget(form.nourriture) }}
+        </td>
+    </tr>
+
+
+    <tr>
+
+        <td>
+            {{ form_widget(form.save) }}
+        </td>
+    </tr>
+
+
+</table>
+{{ form_end(form) }}

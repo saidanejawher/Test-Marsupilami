@@ -1,0 +1,20 @@
+<form method="POST">
+    Libelle : <input type ="text" name="libelle"><br>
+    <input type="submit" value ="Recherche">
+</form>
+
+<table border="1">
+    <th>Id</th>
+    <th>Libelle</th>
+    <th>Pays</th>
+    {% for m in modeles %}
+        <tr>
+
+            <td>{{ m.id}}</td>
+            <td>{{ m.libelle }}</td>
+            <td>{{ m.pays }}</td>
+
+        </tr>
+    {% endfor %}
+
+</table>

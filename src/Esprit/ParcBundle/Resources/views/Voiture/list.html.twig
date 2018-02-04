@@ -1,0 +1,33 @@
+<ul>
+
+    {% for marque in marques %}
+    <li style="color : blue">  {{ marque|upper }}  </li>
+    {% endfor %}
+
+    <h2>Liste des voitures</h2>
+    <table border="1">
+
+        <tr>
+            <td>id</td>
+            <td>serie</td>
+            <td>date de mise en circulation</td>
+            <td>Marque</td>
+        </tr>
+
+        {% for voiture in voitures %}
+        <tr>
+            <td> {{ voiture.id }} </td>
+            <td> {{ voiture.serie }} </td>
+            <td> {{ voiture.dateMiseCirculation }} </td>
+            <td> {{ voiture.marque }} </td>
+            <td> <a href="{{ path('AfficheDetail',{'id':voiture.id,'serie':voiture.serie,'date':voiture.dateMiseCirculation,'marque':voiture.marque})}}" target="_Blank">Afficher</a></td>
+
+        </tr>
+        {% endfor %}
+
+
+    </table>
+
+
+
+</ul>

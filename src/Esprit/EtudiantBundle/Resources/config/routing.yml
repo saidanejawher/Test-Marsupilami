@@ -1,0 +1,11 @@
+esprit_etudiant_homepage:
+    path:     /
+    defaults: { _controller: EspritEtudiantBundle:Default:index }
+
+esprit_etudiant_affiche:
+    path:     /affiche/{id}
+    defaults: { _controller: EspritEtudiantBundle:Etudiant:affiche }
+
+esprit_etudiant_voir:
+    path:     /voir/{name}
+    defaults: { _controller: EspritEtudiantBundle:Etudiant:voir }

@@ -1,0 +1,21 @@
+<h1>La liste des modeles est</h1>
+<table border="1">
+    <th>Id</th>
+    <th>Libelle</th>
+    <th>Pays</th>
+    <th>Supprimer</th>
+    <th>Modifier</th>
+    {% for m in modeles %}
+    <tr>
+
+        <td>{{ m.id}}</td>
+        <td>{{ m.libelle }}</td>
+        <td>{{ m.pays }}</td>
+        <td> <a href="{{ path('SupprimerModele',{'id':m.id}) }}" target="_blank">supprimer</a></td>
+        <td> <a href="{{ path('ModifierModele',{'id':m.id}) }}" target="_blank">modifier</a></td>
+
+
+    </tr>
+    {% endfor %}
+
+</table>

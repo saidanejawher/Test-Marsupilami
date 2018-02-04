@@ -1,0 +1,65 @@
+esprit_parc_homepage:
+    path:     /
+    defaults: { _controller: EspritParcBundle:Default:index }
+
+esprit_parc_affichage:
+    path:     /afficher/{marque}
+    defaults: { _controller: EspritParcBundle:Voiture:affichage }
+
+esprit_parc_list:
+    path:     /list
+    defaults: { _controller: EspritParcBundle:Voiture:list }
+
+AfficheDetail:
+    path:     /afficheDetail
+    defaults: { _controller: EspritParcBundle:Voiture:affiche }
+
+AfficheModele:
+    path:     /listModele
+    defaults: { _controller: EspritParcBundle:Modele:list }
+
+AfficheAnim:
+    path:     /listAnim
+    defaults: { _controller: EspritParcBundle:Animal:list }
+
+SupprimerAnimal:
+    path:     /suppAnim/{id}
+    defaults: { _controller: EspritParcBundle:Animal:supprimer }
+
+ModifierAnimal:
+    path:     /modifierAnim/{id}
+    defaults: { _controller: EspritParcBundle:Animal:modifier }
+
+SupprimerModele:
+    path:     /suppModele/{id}
+    defaults: { _controller: EspritParcBundle:Modele:supprimer }
+
+AjouterAnimal:
+    path:     /ajoutAnim
+    defaults: { _controller: EspritParcBundle:Animal:ajout2 }
+
+AjouterModele:
+    path:     /ajout
+    defaults: { _controller: EspritParcBundle:Modele:ajout }
+
+ModifierModele:
+    path:     /modifier/{id}
+    defaults: { _controller: EspritParcBundle:Modele:modifier }
+
+RechercherModele:
+    path:     /rechercher/
+    defaults: { _controller: EspritParcBundle:Modele:recherche }
+
+
+
+ajouterVoiture:
+    path:     /ajoutVoit/
+    defaults: { _controller: EspritParcBundle:Voiture:ajout }
+
+QueryBuilder_Modele:
+    path:     /Query
+    defaults: { _controller: EspritParcBundle:Modele:QueryBuilder }
+
+DQL_Modele:
+    path:     /DQL/{pays}
+    defaults: { _controller: EspritParcBundle:Modele:findDQL2 }
